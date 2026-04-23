@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 100vh;
+    border: 0.15rem solid black;
+}
+
+/* HEADER FIJO */
+header {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 0.1rem solid black;
+    background-color: #eee;
+}
+
+/* MAIN */
+main {
+    margin-top: 4rem;
+    padding: 2rem;
+}
+
+/* INDICE */
+.indice {
+    margin-bottom: 3rem;
+}
+
+/* RECETAS (rectángulos) */
+.receta {
+    border: 0.1rem solid black;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* HEADER DE CADA RECETA */
+.receta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* BOTÓN */
+.btn {
+    text-decoration: none;
+    border: 0.1rem solid black;
+    padding: 0.5rem 1rem;
+}
+
+/* EVITA QUE HEADER TAPE */
+section {
+    scroll-margin-top: 5rem;
+}

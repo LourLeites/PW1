@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+/* BASE */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background-color: #fdf6e3;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #f5e6cc; 
+    border: 0.15rem solid black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    background-color: #f8c8dc; 
+    border-bottom: 0.15rem solid black;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+main {
+    flex: 1;
+    overflow-y: auto;
+
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    padding: 2rem 0;
+}
+
+.receta {
+    width: 80%;
+    margin: 0 auto 2rem auto;
+    border: 0.15rem solid black;
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: #fffaf0;
+}
+
+.receta h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.receta img {
+    display: block;
+    width: 70%;
+    max-width: 8rem; 
+    margin: auto;
+    background-color: #f0e0d6;
+}
+
+
+h3 {
+    margin-left: 2rem;
+}
+
+ol {
+    margin-left: 3rem;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    background-color: #f8c8dc;
+    border-top: 0.15rem solid black;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.formulario {
+    width: 60%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.fila {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+/* LABEL FIJO */
+.fila label {
+    width: 20%;
+}
+
+/* INPUTS IGUALES */
+.fila input {
+    width: 40%;
+    padding: 0.5rem;
+}
+
+/* TEXTAREA MISMO INICIO Y FIN */
+.fila textarea {
+    width: 40%;
+    height: 6rem;
+}
+
+button {
+    padding: 0.7rem;
+    background-color: #f8c8dc;
+    border: none;
+}
+.enviar {
+    background-color: #b3c7d6; /* azul */
+    border: 0.1rem solid black;
+    padding: 0.5rem 2rem;
+}
+
+.cancelar {
+    background-color: #e0b3b3; /* rojo/rosado */
+    border: 0.1rem solid black;
+    padding: 0.5rem 2rem;
+}

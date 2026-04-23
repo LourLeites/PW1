@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 100vh; 
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.top img {
+    width: 20%;         
+    max-width: 8rem;     
+    border-radius: 1rem; 
+}
