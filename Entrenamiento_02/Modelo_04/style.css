@@ -1,0 +1,125 @@
+:root {
+  --amarillo: #ffe69c;
+  --azul: #90b9ff;
+  --verde: #dcedc8;
+  --rosa: #f8bbd0;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+.contenedor {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+
+  grid-template-columns: 1fd;
+  grid-template-rows: repeat(6, 1fr);
+
+  grid-template-areas:
+    "uno"
+    "dos"
+    "tres"
+    "cuatro"
+    "cinco"
+    "seis";
+}
+
+.caja {
+  font-size: 3em;
+  text-align: center;
+  align-content: center;
+ 
+}
+
+.item1 {
+  grid-area: uno;
+  background-color: var(--verde)
+}
+
+.item2 {
+  grid-area: dos;
+  background-color: var(--verde);
+}
+
+.item3 {
+  grid-area: tres;
+  background-color: var(--amarillo);
+}
+
+.item4 {
+  grid-area: cuatro;
+  background-color: var(--amarillo);
+}
+
+.item5 {
+  grid-area: cinco;
+  background-color: var(--azul);
+}
+
+.item6 {
+  grid-area: seis;
+  background-color: var(--rosa);
+}
+
+.item3, .item4, .item5, .item6{
+  border: 2px black solid;
+}
+
+/* Dentro de este media empiezas los cambios en TABLET */
+@media (min-width: 768px) {
+  .contenedor {
+    /* Cambiamos a 4 columnas y 2 filas */
+    grid-template-columns: 2fr 1fr;
+    /* La fila de arriba parece ocupar el doble de alto que la de abajo en el modelo 1 */
+    grid-template-rows: 1fr 1fr 1fr;
+
+    /* Redibujamos la estructura para PC */
+    grid-template-areas:
+      "uno dos"
+      "tres cuatro"
+      "cinco seis";
+  }
+  .caja{
+    border: 2px black solid;
+  }
+.item1, .item2{
+  background-color: var(--verde);
+}
+  .item3,
+  .item4{
+    background-color: var(--amarillo);
+  }
+  .item5{
+    background-color: var(--rosa);
+  }
+  .item6 {
+    background-color: var(--azul);
+  }
+
+}
+
+/* Dentro de este media empiezas los cambios en P*C */
+@media (min-width: 1024px){
+  .contenedor{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    grid-template-areas: 
+    "uno dos dos cuatro"
+    "uno tres tres cuatro"
+    "cinco cinco seis seis";
+  }
+  .caja{
+    border: 2px black solid;
+  }
+  .item1, .item4{
+    background-color: var(--verde);
+  }
+  .item2, .item3{
+    background-color: beige;
+  }
+
+}

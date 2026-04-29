@@ -1,0 +1,102 @@
+:root {
+  --amarillo: #ffe69c;
+  --azul: #90b9ff;
+  --verde: #dcedc8;
+  --rosa: #f8bbd0;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+.contenedor {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 2fr 2fr;
+
+  grid-template-areas:
+    "uno"
+    "tres"
+    "seis";
+}
+
+.caja {
+  font-size: 3em;
+  text-align: center;
+  align-content: center;
+ 
+}
+
+.item1 {
+  grid-area: uno;
+  background-color: var(--verde)
+}
+
+.item2 {
+  grid-area: dos;
+  background-color: var(--verde);
+  display: none;
+}
+
+.item3 {
+  grid-area: tres;
+  background-color: var(--amarillo);
+}
+
+.item4 {
+  grid-area: cuatro;
+  background-color: var(--amarillo);
+  display: none;
+}
+
+.item5 {
+  grid-area: cinco;
+  background-color: var(--azul);
+  display: none;
+}
+
+.item6 {
+  grid-area: seis;
+  background-color: var(--rosa);
+   border: 2px black solid;
+}
+
+/* Dentro de este media empiezas los cambios en PC */
+@media (min-width: 768px) {
+  .contenedor {
+    /* Cambiamos a 4 columnas y 2 filas */
+    grid-template-columns: 2fr 1fr;
+    /* La fila de arriba parece ocupar el doble de alto que la de abajo en el modelo 1 */
+    grid-template-rows: 1fr 1fr 1fr;
+
+    /* Redibujamos la estructura para PC */
+    grid-template-areas:
+      "uno dos"
+      "tres cuatro"
+      "cinco seis";
+  }
+  .caja{
+    border: 2px black solid;
+  }
+.item1, .item2{
+  background-color: var(--verde);
+}
+  .item3,
+  .item4{
+    background-color: var(--amarillo);
+  }
+  .item5{
+    background-color: var(--rosa);
+  }
+  .item6 {
+    background-color: var(--azul);
+  }
+
+  .item2 , .item4, .item5{
+    display: inline;
+  }
+}
